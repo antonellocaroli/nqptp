@@ -15,12 +15,3 @@ gitversion.h: .git/index
 FORCE: ;
 CLEANFILES += gitversion.h
 endif
-
-
-install-exec-hook:
-if BUILD_FOR_LINUX
-	[ -e /lib/systemd/system ] || mkdir -p /lib/systemd/system
-	cp nqptp.service /lib/systemd/system
-endif
- # no installer for FreeBSD yet
- 
